@@ -37,10 +37,11 @@ export async function getMyFriends(req, res) {
 export async function sendFriendRequest(req, res) {
   try {
     const myId = req.user._id;
-    const { id: recipientId } = req.params.id;
+    // Correct param destructuring (req.params, not req.params.id)
+    const { id: recipientId } = req.params;
 
     //prevent sending request to yourself
-    if (myId === recipientId) {
+    if (myId.toString() === recipientId) {
       return res
         .status(400)
         .json({ message: "You cannot send friend request to yourself" });
@@ -64,12 +65,19 @@ export async function sendFriendRequest(req, res) {
       ],
     });
 
+    if (existingRequest) {
+      return res.status(400).json({ message: "Friend request already exists" });
+    }
+
     const friendRequest = await FriendRequest.create({
       sender: myId,
       recipient: recipientId,
     });
 
-    res.status(201).json(friendRequest);
+    res.status(201).json({
+      message: "Friend request sent successfully",
+      friendRequest,
+    });
   } catch (error) {
     console.error("Error in sendFriendRequest controller", error);
     res.status(500).json({ message: "Internal Server Error" });
