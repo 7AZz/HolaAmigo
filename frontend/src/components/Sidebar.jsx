@@ -1,4 +1,4 @@
-import { BellIcon, Cable, HomeIcon, UserIcon } from "lucide-react";
+import { BellIcon, HeartHandshake, HomeIcon, UserIcon } from "lucide-react";
 import useAuthUser from "../hooks/useAuthUser";
 import { Link, useLocation } from "react-router";
 
@@ -11,9 +11,9 @@ const Sidebar = () => {
     <aside className="w-64 bg-base-200 border-r border-base-300 hidden lg:flex flex-col h-screen sticky top-0">
       <div className="p-5 border-b border-base-300">
         <Link to="/" className="flex items-center gap-2.5">
-          <Cable className="size-9 text-primary" />
+          <HeartHandshake className="size-9 text-primary" />
           <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-            LiveLink
+            HolaAmigo
           </span>
         </Link>
       </div>

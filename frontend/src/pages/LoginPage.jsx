@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cable } from "lucide-react";
+import { HeartHandshake } from "lucide-react";
 import { Link } from "react-router";
 import useLogin from "../hooks/useLogin";
 
@@ -27,9 +27,9 @@ const LoginPage = () => {
         <div className="w-full lg:w-1/2 p-4 sm:p-8 flex flex-col">
           {/*Logo*/}
           <div className="mb-4 flex items-center justify-start gap-2">
-            <Cable className="size-9 text-primary" />
+            <HeartHandshake className="size-9 text-primary" />
             <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wide">
-              LiveLink
+              HolaAmigo
             </span>
           </div>
 

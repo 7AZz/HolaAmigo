@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cable } from "lucide-react";
+import { HeartHandshake } from "lucide-react";
 import { Link } from "react-router";
 import useSignUp from "../hooks/useSignUp";
 
@@ -27,9 +27,9 @@ const SignUpPage = () => {
         <div className="w-full lg:w-1/2 p-4 sm:p-8 flex flex-col">
           {/*Logo*/}
           <div className="mb-4 flex items-center justify-start gap-2">
-            <Cable className="size-9 text-primary" />
+            <HeartHandshake className="size-9 text-primary" />
             <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wide">
-              LiveLink
+              HolaAmigo
             </span>
           </div>
 
@@ -46,7 +46,7 @@ const SignUpPage = () => {
                 <div>
                   <h2 className="text-xl font-semibold">Create an Account</h2>
                   <p className="text-sm opacity-70">
-                    Join LiveLink and start your language learning journey!
+                    Join HolaAmigo and start your language learning journey!
                   </p>
                 </div>
 

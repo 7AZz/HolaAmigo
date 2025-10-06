@@ -1,6 +1,6 @@
 import useAuthUser from "../hooks/useAuthUser";
 import { Link, useLocation } from "react-router";
-import { BellIcon, Cable, LogOutIcon } from "lucide-react";
+import { BellIcon, HeartHandshake, LogOutIcon } from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
 import useLogout from "../hooks/useLogout";
 
@@ -19,9 +19,9 @@ const Navbar = () => {
           {isChatPage && (
             <div className="pl-5">
               <Link to="/" className="flex items-center gap-2.5">
-                <Cable className="size-9 text-primary" />
+                <HeartHandshake className="size-9 text-primary" />
                 <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-                  LiveLink
+                  HolaAmigo
                 </span>
               </Link>
             </div>

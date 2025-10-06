@@ -3,7 +3,7 @@ import useAuthUser from "../hooks/useAuthUser";
 import toast from "react-hot-toast";
 import { completeOnboarding } from "../lib/api";
 import {
-  Cable,
+  HeartHandshake,
   CameraIcon,
   LoaderIcon,
   MapPinIcon,
@@ -204,7 +204,7 @@ export const OnboardingPage = () => {
             >
               {!isPending ? (
                 <>
-                  <Cable className="size-5 mr-2" />
+                  <HeartHandshake className="size-5 mr-2" />
                   Complete Onboarding
                 </>
               ) : (
